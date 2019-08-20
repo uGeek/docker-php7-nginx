@@ -21,22 +21,16 @@ Repository: https://github.com/TrafeX/docker-php-nginx
 ![php 7.3](https://img.shields.io/badge/php-7.3-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-### Breaking changes (26/01/2019)
 
-Please note that the new builds since 26/01/2019 are exposing a different port to access Nginx.
-To be able to run Nginx as a non-privileged user, the port it's running on needed
-to change to a non-privileged port (above 1024).
-
-The last build of the old version that exposed port 80 was `trafex/alpine-nginx-php7:ba1dd422`
 
 ## Usage
 
 Start the Docker container:
 
-    docker run -p 80:8080 trafex/alpine-nginx-php7
+    docker run -p 80:8080 ugeek/php7-nginx
 
 See the PHP info on http://localhost, or the static html page on http://localhost/test.html
 
 Or mount your own code to be served by PHP-FPM & Nginx
 
-    docker run -p 80:8080 -v ~/my-codebase:/var/www/html trafex/alpine-nginx-php7
+    docker run -p 80:8080 -v ~/my-codebase:/var/www/html ugeek/php7-nginx
