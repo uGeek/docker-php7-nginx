@@ -29,6 +29,11 @@ Start the Docker container:
 
     docker run -p 80:8080 ugeek/php7-nginx
 
+```
+docker run -p 80:8080 -v $HOME/docker/nginx-php7:/var/www/html ugeek/php7-nginx:arm
+```
+
+
 See the PHP info on http://localhost, or the static html page on http://localhost/test.html
 
 Or mount your own code to be served by PHP-FPM & Nginx
